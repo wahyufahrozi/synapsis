@@ -1,0 +1,77 @@
+/* .userTable {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  border: 2px solid forestgreen;
+  width: 800px;
+  height: 200px;
+}
+
+th {
+  border-bottom: 1px solid black;
+}
+
+td {
+  text-align: center;
+} */
+
+.userTable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userTable td,
+.userTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.userTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.userTable tr:hover {
+  background-color: #ddd;
+}
+
+.userTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}
+.searchBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search {
+  -webkit-appearance: none;
+  outline: none;
+  padding: 10px;
+  width: 40%;
+  border-radius: 20px;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+.empty-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
