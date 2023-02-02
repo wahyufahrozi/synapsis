@@ -1,11 +1,11 @@
-# Cermati
+# Synapsis
 
 <p align="center">
   <a href="https://reactjs.org/">
     <img title="React Js" height='100' src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png">
   </a>
   <a href="https://synapsis.id/">
-    <img title="Cermati" height='100' src="https://1.bp.blogspot.com/-1DrKs5HCtPw/YBes7tuWigI/AAAAAAAACWI/GZZ6Rv_X8b49mXLwn0SOHQXt_XxG8AwPwCLcBGAsYHQ/s417/3.png">
+    <img title="Synapsis" height='100' src="https://1.bp.blogspot.com/-1DrKs5HCtPw/YBes7tuWigI/AAAAAAAACWI/GZZ6Rv_X8b49mXLwn0SOHQXt_XxG8AwPwCLcBGAsYHQ/s417/3.png">
   </a>
 </p>
 
