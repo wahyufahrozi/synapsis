@@ -130,6 +130,7 @@ const Form = ({ currentId, setCurrentId }) => {
           size="large"
           type="submit"
           fullWidth
+          disabled={form.name.length === 0}
         >
           Submit
         </Button>

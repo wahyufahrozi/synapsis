@@ -13,7 +13,6 @@ const Form = () => {
     title: "",
     body: "",
   });
-  // console.log(form);
 
   const clear = () => {
     setForm({ title: "", body: "" });
@@ -21,7 +20,6 @@ const Form = () => {
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
-  // console.log(form);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -62,6 +60,7 @@ const Form = () => {
           size="large"
           type="submit"
           fullWidth
+          disabled={form.title.length === 0}
         >
           Submit
         </Button>
