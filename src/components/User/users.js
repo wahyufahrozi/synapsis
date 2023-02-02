@@ -7,9 +7,7 @@ import {
   Dialog,
   DialogActions,
   Slide,
-  DialogContent,
   DialogTitle,
-  DialogContentText,
 } from "@material-ui/core";
 import DeleteIcon from "@material-ui/icons/Delete";
 import EditIcon from "@material-ui/icons/Edit";
@@ -23,14 +21,14 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-const Users = ({ setCurrentId }) => {
+const Users = ({ currentId, setCurrentId }) => {
   const dispatch = useDispatch();
   let { users, isLoading } = useSelector((state) => state.users);
   const [searchField, setSearchField] = useState("");
   const numberOfpages = 100 / 10;
   const [openDialog, setOpenDialog] = useState(false);
   const [idUser, setIdUser] = useState();
-  // console.log(id);
+
   function useQuerey() {
     return new URLSearchParams(useLocation().search);
   }
@@ -39,12 +37,12 @@ const Users = ({ setCurrentId }) => {
   const handleChange = (e) => {
     setSearchField(e.target.value);
   };
+
   useEffect(() => {
     if (page) {
       dispatch(getUsers(page));
     }
   }, [dispatch, page]);
-
   const handleOpenDialog = (user) => {
     setOpenDialog(true);
     setIdUser(user);
@@ -59,7 +57,7 @@ const Users = ({ setCurrentId }) => {
   };
 
   const filetereduser = users?.filter((user) =>
-    user?.name.toLowerCase().includes(searchField?.toLowerCase())
+    user.name.toLowerCase().includes(searchField.toLowerCase())
   );
 
   if (!users.length && !isLoading) return "No Post";
@@ -117,7 +115,7 @@ const Users = ({ setCurrentId }) => {
                   <Button
                     size="small"
                     color="secondary"
-                    // onClick={() => dispatch(deleteUser(user.id))}
+                    disabled={currentId !== null}
                     onClick={() => handleOpenDialog(user.id)}
                   >
                     <Tooltip title="delete" arrow>
