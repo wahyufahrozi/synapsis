@@ -1,12 +1,12 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Typography, TextField, Button } from "@material-ui/core";
-// import { useDispatch } from "react-redux";
-// import { commentPost } from "../../redux/actions/posts";
+
 import { useSelector, useDispatch } from "react-redux";
 
 import { useStyles } from "./styles";
 import { createComment, getComments } from "../../redux/actions/posts";
 import { getUser } from "../../redux/actions/users";
+import "../../style.css";
 const CommentSection = ({ post }) => {
   const classes = useStyles();
   const dispatch = useDispatch();
@@ -40,7 +40,7 @@ const CommentSection = ({ post }) => {
   };
 
   return (
-    <div>
+    <div className="comment-components">
       <div className={classes.commentsOuterContainer}>
         <div className={classes.commentsInnerContainer}>
           <Typography gutterBottom variant="h6">

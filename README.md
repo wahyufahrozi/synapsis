@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# Cermati
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <a href="https://reactjs.org/">
+    <img title="React Js" height='100' src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png">
+  </a>
+  <a href="https://synapsis.id/">
+    <img title="Cermati" height='100' src="https://1.bp.blogspot.com/-1DrKs5HCtPw/YBes7tuWigI/AAAAAAAACWI/GZZ6Rv_X8b49mXLwn0SOHQXt_XxG8AwPwCLcBGAsYHQ/s417/3.png">
+  </a>
+</p>
 
-## Available Scripts
+<p align="center">
+    <a href="#">
+  <a href="https://github.com/iyansr?tab=followers">
+    <img title="Followers" src="https://img.shields.io/github/followers/wahyufahrozi?style=social">
+  </a>
+  <a href="#">
+    <img title="Open Source Love" src="https://badges.frapsoft.com/os/v1/open-source.svg?v=102">
+  </a>
+  <a href="#">
+    <img title="Repo Size" src="https://img.shields.io/github/repo-size/wahyufahrozi/synapsis">
+  </a>
+  <a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg"></a>
+</p>
 
-In the project directory, you can run:
+## Table Of Contents
 
-### `npm start`
+- [Synapsis](#synapsis)
+  - [Table Of Contents](#table-of-contents)
+  - [Build Setup](#build-setup)
+  - [Stacks](#stacks)
+  - [Dependencies](#dependencies)
+  - [Aplication Structure](#aplication-structure)
+  - [Screenshots](#screenshots)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Build Setup
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone repository
+   `$ git clone https://github.com/wahyufahrozi/synapsis`
 
-### `npm test`
+2. Install depedencies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+# with npm
+$ npm install
 
-### `npm run build`
+# or with yarn
+$ yarn install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Start Web server
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+$ npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Stacks
 
-### `npm run eject`
+- ReactJS
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Dependencies
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [material-ui](https://mui.com/material-ui/getting-started/installation/) - Material UI, a CSS Framework
+- [react-router-dom](https://www.npmjs.com/package/react-router-dom) - DOM bindings for React Router.
+- [redux](https://www.npmjs.com/package/redux) - State container for JavaScript apps.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Aplication Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- `index.js` - Entry point of our aplication
+- `src/Components` - This folder containt files that define all components
+- `src/asset` - This folder contain image
+- `src/api` - This folder contain API
+- `src/redux` - This folder contain redux
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Screenshots
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Home
+  ![Home](https://user-images.githubusercontent.com/22940581/216292735-c70f71f9-fd89-4a76-bb42-1e27d517d27b.png)
+- List User
+  ![List User](https://user-images.githubusercontent.com/22940581/216293031-5ecdab02-3e0c-47f2-9f1c-e54a98ce9bac.png)
+- Detail Page
+  ![Detail Page](https://user-images.githubusercontent.com/22940581/216294278-2090800a-9757-49cf-8fde-1cd82424f337.png)
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Copyright © 2023 by Wahyu Fahrozi Rezeki Ramadhan
