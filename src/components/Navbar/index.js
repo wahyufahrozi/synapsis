@@ -22,13 +22,13 @@ export default function Navbar() {
           />
         </Link>
       </div>
-      <Link to="/user" style={{ textDecoration: "none" }}>
+      <a href="/user" style={{ textDecoration: "none" }}>
         <Toolbar className={classes.toolbar}>
           <Button variant="contained" color="primary">
             List user
           </Button>
         </Toolbar>
-      </Link>
+      </a>
     </AppBar>
   );
 }
