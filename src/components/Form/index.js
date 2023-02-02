@@ -27,7 +27,6 @@ const Form = () => {
     e.preventDefault();
     dispatch(createPost({ ...form }));
     clear();
-    // console.log("tersimpan", form);
   };
   return (
     <Paper className={classes.paper} elevation={6}>

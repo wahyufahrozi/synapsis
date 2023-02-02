@@ -52,9 +52,9 @@ export const getComments = () => async (dispatch) => {
   }
 };
 
-export const createComment = (comment, id) => async (dispatch) => {
+export const createComment = (comment) => async (dispatch) => {
   try {
-    const { data } = await api.createComment(comment, id);
+    const { data } = await api.createComment(comment);
     dispatch({ type: CREATE_COMMENT, payload: data });
   } catch (error) {
     console.log(error);

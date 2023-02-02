@@ -2,12 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getPost } from "../../redux/actions/posts";
-import {
-  Paper,
-  Typography,
-  CircularProgress,
-  Divider,
-} from "@material-ui/core/";
+import { Paper, CircularProgress, Divider } from "@material-ui/core/";
 import CommentSection from "../CommentsSection";
 import { useStyles } from "./styles";
 const PostDetail = () => {
@@ -29,8 +24,8 @@ const PostDetail = () => {
 
   return (
     <div>
-      <h2>{post.title}</h2> <br />
-      {post.body}
+      <h2>{post?.title}</h2> <br />
+      {post?.body}
       <Divider style={{ margin: "20px 0" }} />
       <CommentSection post={post} />
       <Divider style={{ margin: "20px 0" }} />

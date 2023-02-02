@@ -22,7 +22,7 @@ export default function Navbar() {
           />
         </Link>
       </div>
-      <Link to="/user">
+      <Link to="/user" style={{ textDecoration: "none" }}>
         <Toolbar className={classes.toolbar}>
           <Button variant="contained" color="primary">
             List user

@@ -9,7 +9,6 @@ import {
   Slide,
   DialogContent,
   DialogTitle,
-  DialogContentText,
 } from "@material-ui/core";
 import DeleteIcon from "@material-ui/icons/Delete";
 import EditIcon from "@material-ui/icons/Edit";
@@ -29,8 +28,7 @@ const Users = ({ setCurrentId }) => {
   const [searchField, setSearchField] = useState("");
   const numberOfpages = 100 / 10;
   const [openDialog, setOpenDialog] = useState(false);
-  const [idUser, setIdUser] = useState();
-  // console.log(id);
+
   function useQuerey() {
     return new URLSearchParams(useLocation().search);
   }
@@ -45,16 +43,11 @@ const Users = ({ setCurrentId }) => {
     }
   }, [dispatch, page]);
 
-  const handleOpenDialog = (user) => {
+  const handleOpenDialog = () => {
     setOpenDialog(true);
-    setIdUser(user);
   };
 
   const handleCloseDialog = () => {
-    setOpenDialog(false);
-  };
-  const handleDeleteUser = () => {
-    dispatch(deleteUser(idUser));
     setOpenDialog(false);
   };
 
@@ -67,29 +60,6 @@ const Users = ({ setCurrentId }) => {
     <CircularProgress />
   ) : (
     <div className="container">
-      <div>
-        <Dialog
-          open={openDialog}
-          TransitionComponent={Transition}
-          keepMounted
-          onClose={handleCloseDialog}
-          aria-labelledby="alert-dialog-slide-title"
-          aria-describedby="alert-dialog-slide-description"
-        >
-          <DialogTitle id="alert-dialog-slide-title">
-            {"Yakin ingin menghapus user?"}
-          </DialogTitle>
-
-          <DialogActions>
-            <Button onClick={handleCloseDialog} color="primary">
-              Batal
-            </Button>
-            <Button onClick={handleDeleteUser} color="secondary">
-              Delete
-            </Button>
-          </DialogActions>
-        </Dialog>
-      </div>
       <div className="searchBox">
         <input
           className="search"
@@ -117,8 +87,7 @@ const Users = ({ setCurrentId }) => {
                   <Button
                     size="small"
                     color="secondary"
-                    // onClick={() => dispatch(deleteUser(user.id))}
-                    onClick={() => handleOpenDialog(user.id)}
+                    onClick={() => dispatch(deleteUser(user.id))}
                   >
                     <Tooltip title="delete" arrow>
                       <DeleteIcon fontSize="small" />

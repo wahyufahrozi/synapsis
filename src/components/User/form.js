@@ -20,6 +20,7 @@ const Form = ({ currentId, setCurrentId }) => {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
   const [openStatus, setOpenStatus] = useState(false);
+
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -29,10 +30,7 @@ const Form = ({ currentId, setCurrentId }) => {
   let user = useSelector((state) =>
     currentId ? state.users.users.find((user) => user.id === currentId) : null
   );
-  console.log(user);
-  // const user = useSelector((state) =>
-  //   currentId ? state.users.find((user) => user.id === currentId) : null
-  // );
+
   useEffect(() => {
     if (user) setForm(user);
   }, [user]);
@@ -56,7 +54,8 @@ const Form = ({ currentId, setCurrentId }) => {
   const handleOpenStatus = () => {
     setOpenStatus(true);
   };
-  //   console.log(form);
+  //handle form
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (currentId === null) {
@@ -66,7 +65,6 @@ const Form = ({ currentId, setCurrentId }) => {
       dispatch(updatedUser(currentId, { ...form }));
       clear();
     }
-    // console.log("tersimpan", form);
   };
   return (
     <Paper className={classes.paper} elevation={6}>

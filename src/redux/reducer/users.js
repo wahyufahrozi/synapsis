@@ -5,7 +5,7 @@ import {
   FETCH_ALL,
   DELETE,
   UPDATE,
-  // FETCH_POST,
+  FETCH_USER,
 } from "../constants/actionTypes";
 
 // eslint-disable-next-line import/no-anonymous-default-export
@@ -20,11 +20,11 @@ export default (state = { isLoading: true, users: [] }, action) => {
         ...state,
         users: action.payload.data,
       };
-    // case FETCH_POST:
-    //   return {
-    //     ...state,
-    //     user: action.payload.data,
-    //   };
+    case FETCH_USER:
+      return {
+        ...state,
+        user: action.payload.data,
+      };
 
     case CREATE_USER:
       return {

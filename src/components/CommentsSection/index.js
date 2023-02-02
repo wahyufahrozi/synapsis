@@ -6,30 +6,39 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { useStyles } from "./styles";
 import { createComment, getComments } from "../../redux/actions/posts";
+import { getUser } from "../../redux/actions/users";
 const CommentSection = ({ post }) => {
   const classes = useStyles();
   const dispatch = useDispatch();
-  //   const [comments, setComments] = useState(post?.comments);
   const [comment, setComment] = useState("");
-  //   const user = JSON.parse(localStorage.getItem("profile"));
-  //   const dispatch = useDispatch();
-  let { comments } = useSelector((state) => state.posts);
 
-  console.log(comment);
+  let { comments } = useSelector((state) => state.posts);
+  let { user } = useSelector((state) => state.users);
+
   useEffect(() => {
+    dispatch(getUser());
     dispatch(getComments());
   }, [dispatch]);
+
   const commentsRef = useRef();
-  console.log(comments);
+
   //untuk digunakan ketika user comment maka mengarah pada komen terbaru
 
   const handleComment = async (e) => {
     e.preventDefault();
-    dispatch(createComment({ ...comment }));
+    let data = {
+      id: user.id,
+      email: user.email,
+      name: user.name,
+      post: 16285,
+      body: "bla",
+    };
+
+    dispatch(createComment(data));
 
     commentsRef.current.scrollIntoView({ behavior: "smooth" });
   };
-  //   console.log("coba", comments);
+
   return (
     <div>
       <div className={classes.commentsOuterContainer}>
